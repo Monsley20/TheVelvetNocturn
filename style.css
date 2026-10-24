@@ -1,0 +1,550 @@
+
+/* ==========================================
+   THE VELVET NOCTURNE
+   Gothic Romance Poetry Website
+   ========================================== */
+
+
+/* 1. OUR COLOUR PALETTE */
+
+:root {
+    --night: #100d10;
+    --night-soft: #171117;
+    --burgundy: #4b1e2b;
+    --burgundy-light: #754151;
+    --ivory: #e8dfd2;
+    --muted: #b2a1a6;
+    --gold: #b69a72;
+    --flower-yellow: #d8c77b;
+    --border: #382831;
+}
+
+
+/* 2. THE BASIC PAGE SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-color: var(--night);
+    color: var(--ivory);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+::selection {
+    background-color: var(--burgundy-light);
+    color: white;
+}
+
+
+/* 3. THE TOP NAVIGATION */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    padding: 24px 8%;
+    background-color: var(--night);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-family: "IM Fell English", Georgia, serif;
+    font-size: 24px;
+    color: var(--ivory);
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+
+/* 4. THE HERO: OUR OPENING SCENE */
+
+.hero {
+    min-height: 720px;
+    padding: 110px 24px 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(75, 30, 43, 0.35),
+            transparent 65%
+        ),
+        var(--night);
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 28px 0 10px;
+
+    font-family: "IM Fell English", Georgia, serif;
+    font-size: clamp(58px, 9vw, 112px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.hero h1 em {
+    display: block;
+    color: #c49aa4;
+    font-weight: 400;
+}
+
+.ornament {
+    margin: 18px 0;
+    color: var(--gold);
+    font-size: 22px;
+    letter-spacing: 8px;
+}
+
+.hero-quote {
+    margin-top: 12px;
+    color: #d9bfc6;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 460px;
+    margin: 18px 0 32px;
+    color: var(--muted);
+    font-size: 20px;
+}
+
+
+/* 5. THE ENTER BUTTON */
+
+.enter-button {
+    display: inline-block;
+    padding: 13px 32px;
+
+    border: 1px solid var(--gold);
+    color: var(--ivory);
+
+    font-size: 15px;
+    letter-spacing: 1.5px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.enter-button:hover {
+    background-color: var(--burgundy);
+    border-color: var(--burgundy-light);
+    color: white;
+}
+
+.hero-note {
+    margin-top: 24px;
+    color: #82717a;
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+/* 6. THE DAFFODIL INTRODUCTION */
+
+.flower-introduction {
+    position: relative;
+    overflow: hidden;
+
+    padding: 100px 24px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 100%,
+            rgba(75, 30, 43, 0.24),
+            transparent 65%
+        ),
+        var(--night-soft);
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.flower-introduction h2 {
+    margin: 16px 0 20px;
+
+    font-family: "IM Fell English", Georgia, serif;
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 400;
+}
+
+.flower-introduction > p:not(.eyebrow):not(.flower-signature) {
+    max-width: 580px;
+    margin: 0 auto;
+
+    color: var(--muted);
+    font-size: 21px;
+}
+
+.flower-signature {
+    margin-top: 28px;
+    color: var(--flower-yellow);
+    font-size: 23px;
+    font-style: italic;
+}
+
+
+/* 7. THE POETRY ARCHIVE */
+
+.poetry-section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.poetry-section h2 {
+    margin: 14px 0;
+
+    font-family: "IM Fell English", Georgia, serif;
+    font-size: clamp(38px, 5vw, 56px);
+    font-weight: 400;
+}
+
+.poetry-section > p:last-child {
+    color: var(--muted);
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+/* 8. THE ABOUT SECTION */
+
+.about-section {
+    padding: 90px 24px;
+    text-align: center;
+
+    background-color: var(--night-soft);
+    border-top: 1px solid var(--border);
+}
+
+.about-section h2 {
+    margin: 15px 0;
+
+    font-family: "IM Fell English", Georgia, serif;
+    font-size: 46px;
+    font-weight: 400;
+}
+
+.about-section > p:last-child {
+    max-width: 500px;
+    margin: 0 auto;
+
+    color: var(--muted);
+    font-size: 21px;
+}
+
+
+/* 9. THE FOOTER */
+
+.site-footer {
+    padding: 30px 20px;
+    text-align: center;
+
+    background-color: #0b090b;
+    border-top: 1px solid var(--border);
+}
+
+.site-footer .ornament {
+    margin: 0 0 8px;
+}
+
+.site-footer p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* 10. MAKE THE WEBSITE WORK ON PHONES */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    nav {
+        gap: 24px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero {
+        min-height: 620px;
+        padding: 80px 20px;
+    }
+
+    .hero .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero-quote {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .flower-introduction {
+        padding: 75px 24px;
+    }
+
+    .flower-introduction > p:not(.eyebrow):not(.flower-signature) {
+        font-size: 19px;
+    }
+
+    .poetry-section {
+        padding: 75px 24px;
+    }
+
+    .about-section {
+        padding: 75px 24px;
+    }
+
+}
+
+
+/* ==========================================
+   THE POETRY ARCHIVE CARDS
+   ========================================== */
+
+.archive-intro {
+    color: var(--muted);
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 48px;
+}
+
+.poem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+
+    max-width: 1000px;
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+.poem-card {
+    position: relative;
+    padding: 34px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(75, 30, 43, 0.16),
+            transparent 70%
+        ),
+        var(--night-soft);
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.poem-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.poem-category {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    line-height: 1.8;
+}
+
+.poem-card h3 {
+    margin: 18px 0;
+
+    font-family: "IM Fell English", Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.poem-excerpt {
+    color: var(--muted);
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.read-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid var(--burgundy-light);
+    color: #d5b4be;
+
+    font-size: 16px;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.read-link:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+/* Make the archive work on smaller screens */
+
+@media (max-width: 700px) {
+
+    .poem-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        gap: 20px;
+    }
+
+    .poem-card {
+        padding: 28px 24px;
+    }
+
+    .poem-card h3 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* ==========================================
+   INDIVIDUAL POEM READING SECTIONS
+   ========================================== */
+
+.full-poem {
+    padding: 110px 24px;
+    text-align: center;
+
+    border-top: 1px solid var(--border);
+
+    background:
+        radial-gradient(
+            ellipse at 50% 40%,
+            rgba(75, 30, 43, 0.19),
+            transparent 70%
+        ),
+        var(--night);
+}
+
+.alternate-poem {
+    background-color: var(--night-soft);
+}
+
+.full-poem h2 {
+    margin-top: 18px;
+
+    font-family: "IM Fell English", Georgia, serif;
+    font-size: clamp(38px, 6vw, 58px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.poem-subtitle {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 19px;
+    font-style: italic;
+}
+
+.poem-body {
+    max-width: 580px;
+    margin: 45px auto 35px;
+
+    color: var(--ivory);
+    font-size: 22px;
+    line-height: 2;
+}
+
+.poem-body p {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding-bottom: 5px;
+
+    color: var(--gold);
+    border-bottom: 1px solid var(--border);
+
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #e4c7ce;
+}
+
+/* Adjust poem reading on phones */
+
+@media (max-width: 600px) {
+
+    .full-poem {
+        padding: 80px 22px;
+    }
+
+    .poem-body {
+        font-size: 20px;
+        line-height: 1.9;
+    }
+
+}
